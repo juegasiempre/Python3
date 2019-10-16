@@ -56,30 +56,28 @@ try:
 			#while vpd() < 1.1:
 			#	GPIO.output("""ENTER CHANNEL HERE for dehumidifier""", GPIO.LOW)
 			#	print("Reducing humidity, VPD should be between 0.9 and 1.1.  VPD is currently at {}".format(vpd()))
-			#	time.sleep(30)
+			#	time.sleep(120)
 			#GPIO.output("""ENTER CHANNEL HERE for dehumidifier""", GPIO.HIGH)
-			#time.sleep(30)
 		#elif time.localtime(time.time()).tm_hour >= 3 and time.localtime(time.time()).tm_hour <= 20 and vpd() > 1.1 and mode == 'veg':
 			#"""Humidify that bitch, nozzle in middle"""
 			#while vpd() > 0.9:
 			#	GPIO.output("""ENTER CHANNEL HERE for humidifier""", GPIO.LOW)
 			#	print("Increasing humidity, VPD should be between 0.9 and 1.1.  VPD is currently at {}".format(vpd()))
-			#	time.sleep(30)
+			#	time.sleep(120)
 			#GPIO.output("""ENTER CHANNEL HERE for humidifier""", GPIO.HIGH)
-			#time.sleep(30)
 		#elif time.localtime(time.time()).tm_hour >= 7 and time.localtime(time.time()).tm_hour <= 18 and vpd() < 1.2 and mode == 'flower':
 			#"""Too steamy brah, reduce that shit"""
 			#while vpd() < 1.5:
 			#	GPIO.output("""ENTER CHANNEL HERE for humidifier""", GPIO.LOW)
 			#	print("Reducing humidity, VPD should be between 1.2 and 1.5.  VPD is currently at {}".format(vpd()))
-			#	time.sleep(30)
+			#	time.sleep(120)
 			#GPIO.output("""ENTER CHANNEL HERE for humidifier""", GPIO.HIGH)
 		#elif time.localtime(time.time()).tm_hour >= 7 and time.localtime(time.time()).tm_hour <= 18 and vpd() > 1.5 and mode == 'flower' and bme280.temperature < 30:
 			#"""Humidify that bitch, nozzle in middle"""
-			#while vpd() < 1.2:
+			#while vpd() > 1.2:
 			#	GPIO.output("""ENTER CHANNEL HERE for humidifier""", GPIO.LOW)
 			#	print("Increasing humidity, VPD should be between 1.2 and 1.5.  VPD is currently at {}".format(vpd()))
-			#	time.sleep(30)
+			#	time.sleep(120)
 			#GPIO.output("""ENTER CHANNEL HERE for humidifier""", GPIO.HIGH)
 except KeyboardInterrupt:
 	GPIO.cleanup()
